@@ -17,3 +17,6 @@ clean:
 	if [ -f $(gitconfig_origin) ]; then \
 		$q echo mv $(gitconfig_origin) $(gitconfig); \
 	fi
+
+diff:
+	-diff $(gitconfig) .gitconfig
