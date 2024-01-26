@@ -5,5 +5,17 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 [alias]
-	lg = log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+	lg = log --graph --all --oneline
+	lgg = log --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
 	start = !git init && git commit --allow-empty -m \"Initial commit\"
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[sendemail]
+	smtpuser = ivoshopov@gmail.com
+	smtpserver = smtp.googlemail.com
+	smtpencryption = tls
+	smtpserverport = 587
